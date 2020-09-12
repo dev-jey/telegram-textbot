@@ -1,0 +1,204 @@
+/**
+ * CSS Styles
+ */
+
+ :root {
+    --main-bg-color: #039BE5;
+    --custom-width: 70vw;
+}
+
+html {
+    height: 100%;
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    position: relative;
+    margin: 0;
+    padding-bottom: 6rem;
+    min-height: 100%;
+    font-family: "Helvetica Neue", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+h1{
+    padding:0;
+    margin:0;
+}
+
+.circles-img{
+    position: absolute;
+    width: 100%;
+    max-width: 400px;
+}
+
+
+/**
+* Nav Bar
+*/
+
+.blue {
+    height: 5px;
+    background-color: var(--main-bg-color);
+}
+
+.navbar {
+    padding: .75rem 1.3rem;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.navbar__right {
+    text-align: right;
+    line-height: 33px;
+}
+
+.navbar__left-logo {
+    font-style: normal;
+    font-weight: bold;
+    font-size: calc(.65rem + .6vw);
+    line-height: 33px;
+}
+
+.navbar__left-logo:hover {
+    font-size: calc(.66rem + .6vw);
+    cursor: pointer;
+}
+
+.navbar__left-logo span {
+    color: var(--main-bg-color);
+}
+.btn{
+    border-radius: 5px;
+    font-size: 14px;
+    padding: .5rem 1.5rem;
+    color:#fff;
+    font-weight: bold;
+}
+.navbar__right-signup{
+    background: #fff;
+    border: 1px solid var(--main-bg-color);
+    color: var(--main-bg-color)
+}
+.navbar__right-signup:hover{
+    background: var(--main-bg-color);
+    color:#fff;
+}
+
+  
+.navbar__right-login{
+    color:#000;
+}
+.navbar__right-login:hover{
+    color:var(--main-bg-color);
+}
+
+/**
+  *  Main section styles
+  */
+
+.main {
+    margin: 0 auto;
+    max-width: var(--custom-width);
+    width: 100%;
+}
+
+.main h1 {
+    margin-top: 0;
+}
+
+.content-section{
+    margin-top: 7%;
+    padding: 1.3rem;
+    height:100%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.content-section__left{
+    align-self: center;
+    width: 80%;
+}
+.content-section__left h1{
+    font-size: 4rem;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: -.05ch;
+}
+.content-section__left p{
+    font-style: normal;
+    font-weight: bold;
+    font-size: .8rem;
+    line-height: 25px;
+    color: rgb(143, 143, 143);
+    letter-spacing: .02ch;
+}
+
+.content-section__left a{
+    color: #fff;
+    background: var(--main-bg-color);
+}
+
+.content-section__left a:hover{
+    color: var(--main-bg-color);
+    background: #fff;
+}
+
+.content-section__right img{
+    align-self: center;
+    width:100%;
+}
+
+/**
+   * Footer Styles
+   */
+
+.footer {
+    position: absolute;
+    margin: 0 auto;
+    max-width: var(--custom-width);
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 1rem;
+    text-align: left;
+    font-size: calc(.66rem + .1vw);
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.footer a {
+    color: var(--main-bg-color);
+}
+
+.footer__right{
+    text-align: right;
+}
+
+
+/**
+* Mobile Settings
+*/
+
+@media screen and (max-width:1200px) {
+    .main, .footer,  .content-section {
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .footer, .content-section {
+        grid-template-columns: 100%;
+    }
+    .footer__left, .footer__right{
+        text-align: center;
+    }
+}
