@@ -176,14 +176,14 @@ h1{
     position: absolute;
     top: 0;
     width: 100%;
-    height: 0vh;
+    height: 0;
     z-index: 1;
     opacity: 0;
     transition: opacity 0.4s, height .5s;
 }
 
 .login-page.show, .signup-page.show{
-    height: 100vh;
+    height: 100%;
     opacity: .96;
 }
 
