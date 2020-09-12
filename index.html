@@ -11,6 +11,23 @@
 <body>
     <section class="blue"></section>
     <img src="assets/images/circles.svg" class="circles-img" alt="Circles">
+
+    <section class="login-page" id="login-page">
+        <div class="x" id="x">
+            <div class="close">
+                <div class="close-btn"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="signup-page" id="signup-page">
+        <div class="x-signup" id="x-signup">
+            <div class="close">
+                <div class="close-btn"></div>
+            </div>
+        </div>
+    </section>
+
     <section class="main">
         <header>
             <nav class="navbar">
@@ -18,11 +35,10 @@
                     <a href="/" class="navbar__left-logo">Telegram <span>Textbot</span></a>
                 </div>
                 <div class="navbar__right">
-                    <a href="/" class="btn navbar__right-login">Login</a>
-                    <a href="/" class="btn navbar__right-signup">Register</a>
+                    <a href="/" class="btn navbar__right-login" id="login">Login</a>
+                    <a href="/" class="btn navbar__right-signup" id="signup">Register</a>
                 </div>
             </nav>
-
         </header>
         <section class="content-section">
             <div class="content-section__left">
@@ -31,13 +47,13 @@
                 </h1>
                 <p>
                     Broadcast your messages to different groups or channels automatically.
-                     Telegram Textbot will ease your work and give you more time to do productive work
+                    Telegram Textbot will ease your work and give you more time to do productive work
                 </p>
-<br>
-                <a href="/" class="btn navbar__right-signup">Create Account  Now</a>
+                <br>
+                <a href="/" class="btn navbar__right-signup" id="signup-main">Create Account Now</a>
             </div>
             <div class="content-section__right">
-            <img src="assets/images/telegram-logo.svg" alt="logo">
+                <img src="assets/images/telegram-logo.svg" alt="logo">
             </div>
         </section>
         <footer class="footer">
@@ -52,6 +68,45 @@
             </div>
         </footer>
     </section>
+
+    <!--
+        Javascript
+    -->
+    <script>
+
+        //Login Button Click
+        document.getElementById("login").addEventListener("click", function (e) {
+            e.preventDefault()
+            document.getElementById("login-page").classList.add('show');
+            document.getElementById("x").style.display =   "block";
+        });
+
+        //Login close
+        document.getElementById("x").addEventListener("click", function (e) {
+            e.preventDefault();
+            document.getElementById("login-page").classList.remove('show');
+            document.getElementById("x").style.display =   "none";
+        });
+
+        //signup close
+        document.getElementById("x-signup").addEventListener("click", function (e) {
+            e.preventDefault();
+            document.getElementById("signup-page").classList.remove('show');
+            document.getElementById("x-signup").style.display =   "none";
+        });
+
+        //Signup Button Click
+        document.getElementById("signup").addEventListener("click", function (e) {
+            e.preventDefault();
+            document.getElementById("signup-page").classList.add('show');
+            document.getElementById("x-signup").style.display =   "block";
+        });
+        document.getElementById("signup-main").addEventListener("click", function (e) {
+            e.preventDefault();
+            document.getElementById("signup-page").classList.add('show');
+            document.getElementById("x-signup").style.display =   "block";
+        });
+    </script>
 </body>
 
 </html>
