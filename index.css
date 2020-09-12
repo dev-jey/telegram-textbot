@@ -285,6 +285,12 @@ h1{
 }
 
 @media screen and (max-width:600px) {
+    .content-section__left{
+        margin-top: 20%
+    }
+    #tele-logo{
+        display: none;
+    }
     .footer, .content-section {
         grid-template-columns: 100%;
     }
