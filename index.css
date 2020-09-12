@@ -129,16 +129,29 @@ h1{
     width: 80%;
 }
 .content-section__left h1{
+    position: relative;
     font-size: 4rem;
-    letter-spacing: -.05ch;
+    padding-bottom: 1rem;
 }
+.content-section__left h1::after{
+    content: "";
+    position: absolute;
+    height: 7px;
+    width: 20%;
+    border-radius: 3px;
+    background:  linear-gradient( to right, var(--main-bg-color), rgb(128, 217, 252), var(--main-bg-color));
+    bottom:0;
+    left:0;
+}
+
 .content-section__left p{
     font-style: normal;
-    font-weight: bold;
+    font-weight:normal;
     font-size: .8rem;
     line-height: 25px;
-    color: rgb(143, 143, 143);
-    letter-spacing: .02ch;
+    color: rgb(160, 160, 160);
+    letter-spacing: .05ch;
+    padding-top: 1rem;
 }
 
 .content-section__left a{
