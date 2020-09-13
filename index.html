@@ -9,24 +9,37 @@
 </head>
 
 <body>
+
+    <!--
+        Blue Section
+    -->
     <section class="blue"></section>
     <img src="assets/images/circles.svg" class="circles-img" alt="Circles">
 
+    <!--
+        Overlay for Modals
+    -->
     <div class="mobile-cover" id="mobile-cover">
     </div>
 
+    <!--
+        Mobile Menu
+    -->
     <div class="mobile-menu" id="mobile-menu">
         <div class="x-menu" id="x-menu">
             <div class="close">
                 <div class="close-btn"></div>
             </div>
         </div>
-    <div class="mobile__button-list">
-        <a href="/" class="btn navbar__right-login" id="login">Login</a>
-        <a href="/" class="btn navbar__right-signup" id="signup">Register</a>
-    </div>
+        <div class="mobile__button-list">
+            <a href="/" class="btn navbar__right-login" id="login">Login</a>
+            <a href="/" class="btn navbar__right-signup" id="signup">Register</a>
+        </div>
     </div>
 
+    <!--
+        Login Modal
+    -->
     <section class="login-page" id="login-page">
         <img src="assets/images/circles.svg" class="circles-img" alt="Circles">
         <div class="x" id="x">
@@ -34,8 +47,21 @@
                 <div class="close-btn"></div>
             </div>
         </div>
+        <form class="login-form" method="POST">
+            <h1>Login</h1>
+            <p>Log into your account to start using our <br>services.</p><br>
+            <input required type="email" name="email" id="email" class="input-fields" placeholder="Email"><br>
+            <input required type="password" name="" id="password" class="input-fields" placeholder="Password"><br>
+            <input type="submit" name="login-submit" id="login-submit" class="btn submit-btn" value="Login"><br>
+
+            <p>Do not have an account?<br> 
+            <a href="" id="signup-link">Register</a> here.</p><br>
+        </form>
     </section>
 
+    <!--
+        Signup Modal
+    -->
     <section class="signup-page" id="signup-page">
         <img src="assets/images/circles.svg" class="circles-img" alt="Circles">
         <div class="x-signup" id="x-signup">
@@ -43,8 +69,22 @@
                 <div class="close-btn"></div>
             </div>
         </div>
+        <form class="signup-form" method="POST">
+            <h1>Register</h1>
+            <p>Create an account to start enjoying our <br>services.</p><br>
+            <input required type="text" name="name" id="name-signup" class="input-fields" placeholder="Username"><br>
+            <input required type="email" name="email" id="email-signup" class="input-fields" placeholder="Email"><br>
+            <input required type="password" name="" id="password-signup" class="input-fields" placeholder="Password"><br>
+            <input type="submit" name="signup-submit" id="signup-submit" class="btn submit-btn" value="Signup"><br>
+
+            <p>Already have an account?<br> 
+            <a href="" id="login-link">Login</a> here.</p><br>
+        </form>
     </section>
 
+    <!--
+        MAin section
+    -->
     <section class="main">
         <header>
             <nav class="navbar">
@@ -76,6 +116,10 @@
                 <img src="assets/images/telegram-logo.svg" alt="logo" id="tele-logo">
             </div>
         </section>
+
+        <!--
+            Footer
+        -->
         <footer class="footer">
             <div class="footer__left">
                 All Rights Reserved. <a href="/">Terms</a> and <a href="/">Conditions</a>.
@@ -96,72 +140,98 @@
 
         //Login Button Click
         document.getElementById("login").addEventListener("click", function (e) {
-            e.preventDefault()
-            document.getElementById("mobile-cover").classList.remove('show');
-            document.getElementById("mobile-menu").classList.remove('show');
-            document.getElementById("login-page").classList.add('show');
-            document.getElementById("x").style.display = "block";
+            closeMenu(e);
+            openLogin(e);
         });
         document.getElementById("login-desktop").addEventListener("click", function (e) {
-            e.preventDefault();
-            document.getElementById("login-page").classList.add('show');
-            document.getElementById("x").style.display = "block";
+            openLogin(e);
         });
 
         //Login close
         document.getElementById("x").addEventListener("click", function (e) {
-            e.preventDefault();
-            document.getElementById("login-page").classList.remove('show');
-            document.getElementById("x").style.display = "none";
+            closeLogin(e);
         });
 
         //signup close
         document.getElementById("x-signup").addEventListener("click", function (e) {
-            e.preventDefault();
-            document.getElementById("signup-page").classList.remove('show');
-            document.getElementById("x-signup").style.display = "none";
+            closeSignup(e);
         });
 
         //Signup Button Click
         document.getElementById("signup").addEventListener("click", function (e) {
-            e.preventDefault();
-            document.getElementById("mobile-cover").classList.remove('show');
-            document.getElementById("mobile-menu").classList.remove('show');
-            document.getElementById("signup-page").classList.add('show');
-            document.getElementById("x-signup").style.display = "block";
+            closeMenu(e);
+            openSignup(e);
         });
-        document.getElementById("signup-desktop").addEventListener("click", function (e) {
-            e.preventDefault();
-            document.getElementById("signup-page").classList.add('show');
-            document.getElementById("x-signup").style.display = "block";
+        document.getElementById("signup-desktop").addEventListener("click", function (e) { 
+            openSignup(e);
         });
         document.getElementById("signup-main").addEventListener("click", function (e) {
+            openSignup(e);
+        });
+                // Toggle Menu
+                document.getElementById("ham").addEventListener("click", function (e) {
+            openMenu(e);
+        });
+
+        document.getElementById("x-menu").addEventListener("click", function (e) {
+            closeMenu(e);
+        });
+
+        document.getElementById("mobile-cover").addEventListener("click", function (e) {
+            closeMenu(e);
+        });
+
+        //Open signup
+        document.getElementById("signup-link").addEventListener("click", function   (e){
+            closeLogin(e);
+            openSignup(e);
+        })
+
+        document.getElementById("login-link").addEventListener("click", function   (e){
+            closeSignup(e);
+            openLogin(e);
+        })
+
+
+        // Functions
+        function  openSignup(e){
             e.preventDefault();
             document.getElementById("signup-page").classList.add('show');
             document.getElementById("x-signup").style.display = "block";
-        });
+        }
 
-        // Toggle Menu
-        document.getElementById("ham").addEventListener("click", function (e) {
+        function  openLogin(e){
+            e.preventDefault();
+            document.getElementById("login-page").classList.add('show');
+            document.getElementById("x").style.display = "block";
+        }
+
+        function  openMenu(e){
             e.preventDefault();
             document.getElementById("mobile-cover").classList.add('show');
             document.getElementById("mobile-menu").classList.add('show');
             document.getElementById("x-menu").style.display = "block";
-        });
+        }
 
-        document.getElementById("x-menu").addEventListener("click", function (e) {
+        function closeSignup(e){
+            e.preventDefault();
+            document.getElementById("signup-page").classList.remove('show');
+            document.getElementById("x-signup").style.display = "none";
+        }
+
+        function closeLogin(e){
+            e.preventDefault();
+            document.getElementById("login-page").classList.remove('show');
+            document.getElementById("x").style.display = "none";
+        }
+        function closeMenu(e){
             e.preventDefault();
             document.getElementById("mobile-cover").classList.remove('show');
             document.getElementById("mobile-menu").classList.remove('show');
             document.getElementById("x-menu").style.display = "none";
-        });
+        }
 
-        document.getElementById("mobile-cover").addEventListener("click", function (e) {
-            e.preventDefault();
-            document.getElementById("mobile-cover").classList.remove('show');
-            document.getElementById("mobile-menu").classList.remove('show');
-            document.getElementById("x-menu").style.display = "none";
-        });
+
     </script>
 </body>
 

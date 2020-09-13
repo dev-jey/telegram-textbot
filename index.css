@@ -5,6 +5,7 @@
  :root {
     --main-bg-color: #039BE5;
     --custom-width: 70vw;
+    --text-muted:rgb(160, 160, 160);
 }
 
 html {
@@ -95,6 +96,9 @@ h1{
     color:#fff;
     font-weight: bold;
 }
+.btn:focus{
+    outline:none;
+}
 .navbar__right-signup{
     background: #fff;
     border: 1px solid var(--main-bg-color);
@@ -162,7 +166,7 @@ h1{
     font-weight:normal;
     font-size: .8rem;
     line-height: 25px;
-    color: rgb(160, 160, 160);
+    color: var(--text-muted);
     letter-spacing: .05ch;
     padding-top: 1rem;
 }
@@ -199,10 +203,12 @@ h1{
     height: 100%;
     opacity: .96;
     z-index: 102;
+    display: grid;
 }
 
 .x , .x-signup,.x-menu {
     float:right;
+    justify-self: end;
     margin: 15px 25px;
     cursor: pointer;
     width:  50px;
@@ -240,6 +246,65 @@ h1{
     background-color: #fff;
     transform: rotate(90deg);
     Z-index: 2;
+  }
+
+
+  /**
+  * Login  Form
+  */
+  .login-form, .signup-form{
+      margin:auto;
+      width: var(--custom-width);
+      margin-top: -50px;
+      display: grid;
+      text-align: center;
+      position: relative;
+  }
+
+  .login-form  h1, .signup-form h1 {
+    padding:0;
+    margin:auto;
+    color:#fff;
+}
+
+  .login-form .input-fields, .signup-form .input-fields{
+      margin:auto;
+      outline: #000;
+      border: var(--main-bg-color);
+      max-width: 350px;
+      width: 100%;
+      height: 40px;
+      border-radius: 4px;
+      padding-left: .5rem;
+      box-sizing: border-box;
+  }
+
+
+  .login-form  p, .signup-form  p{
+    color:  rgb(209, 209, 209);
+    font-size: .8rem;
+}
+.login-form  p a, .signup-form p  a{
+    color:  #fff;
+    text-decoration: underline;
+}
+  .login-form .input-fields:focus, .signup-form  .input-fields:focus{
+      border: rgb(151, 151, 151) 1px solid;
+  }
+
+  .submit-btn{
+      background: var(--main-bg-color);
+      color: #fff;
+      border:#fff 1px solid; max-width: 350px;
+      width: 100%;
+      cursor: pointer;     
+      height: 40px; 
+      margin:auto;
+      transition: background .5s, color .5s;
+  }
+
+  .submit-btn:hover{
+    background: linear-gradient(to right, rgba(255, 255, 255,.2), var(--main-bg-color), rgba(255, 255, 255,.2));
   }
 
 
