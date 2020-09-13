@@ -39,6 +39,7 @@ h1{
     position: absolute;
     width: 100%;
     max-width: 400px;
+    z-index: -1;
 }
 
 
@@ -57,9 +58,19 @@ h1{
     grid-template-columns: 50% 50%;
 }
 
-.navbar__right {
+.navbar__right, .ham {
     text-align: right;
     line-height: 33px;
+}
+
+.ham{
+    display: none;
+}
+.mobile-menu{
+    z-index: -10;
+    opacity: 0;
+    height:0;
+    width: 0;
 }
 
 .navbar__left-logo {
@@ -177,7 +188,7 @@ h1{
     top: 0;
     width: 100%;
     height: 0;
-    z-index: 1;
+    z-index: -1;
     opacity: 0;
     transition: opacity 0.4s, height .5s;
 }
@@ -185,9 +196,10 @@ h1{
 .login-page.show, .signup-page.show{
     height: 100%;
     opacity: .96;
+    z-index: 102;
 }
 
-.x , .x-signup {
+.x , .x-signup,.x-menu {
     float:right;
     margin: 15px 25px;
     cursor: pointer;
@@ -200,7 +212,7 @@ h1{
     display: none;
 }
 
-.x:hover,.x-signup:hover {
+.x:hover,.x-signup:hover, .x-menu:hover {
     background-color: rgb(255, 72, 72);
 }
 .close:hover, .close-btn:hover  {    
@@ -228,24 +240,6 @@ h1{
     Z-index: 2;
   }
 
-
-
-@keyframes loginmodal {
-    0% {
-        height: 0
-    }
-    100% {
-        height: 100vh
-    }
-}
-@keyframes loginmodalclose {
-    0% {
-        height: 100vh;
-    }
-    100% {
-        height: 0;
-    }
-}
 
 /**
    * Footer Styles
@@ -288,6 +282,82 @@ h1{
     .content-section__left{
         margin-top: 20%
     }
+    .navbar__right{
+        display:none;
+    }
+    .ham {
+        display: block;
+        position: absolute;
+        z-index: 99;
+        background-color: var(--main-bg-color);
+        width: 30px;
+        height:5px;
+        right:0;
+        margin: 15px 25px;
+        border-radius: 1px;
+        cursor: pointer;
+    }
+    .ham::before{
+        content:"";
+        position: absolute;
+        width: 30px;
+        height:5px;
+        top:0;
+        background-color: var(--main-bg-color);
+        margin:-10px -30px;
+        border-radius: 1px;
+        cursor: pointer;
+    }
+
+    .ham::after{
+        content:"";
+        position: absolute;
+        width: 30px;
+        height:5px;
+        top:0;
+        background-color: var(--main-bg-color);
+        margin:10px -30px;
+        border-radius: 1px;
+        cursor: pointer;
+    }
+    
+    .mobile-menu.btn{
+        display: none;
+    }
+    .mobile-menu .show .btn{
+        display: block;
+    }
+
+    .mobile-menu{
+        background-color: var(--main-bg-color);
+        position: absolute;
+        top: 0;
+        width: 0;
+        height: 100%;
+        z-index: -1;
+        opacity: 0;
+        transition: opacity .3s, width .5s;
+    }
+
+    .mobile-menu.show{
+        width: 100%;
+        opacity: .99;
+        z-index: 102;
+    }
+
+    .mobile__button-list{
+        height:100%;
+        width: 100%;
+    }
+    .mobile__button-list a{
+        width:100%;
+        background: #fff;
+        border:none;
+        float: left;
+        border-radius: 0;
+        margin-top: .2rem;
+    }
+
     #tele-logo{
         display: none;
     }
