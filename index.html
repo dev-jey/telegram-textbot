@@ -11,15 +11,18 @@
 <body>
     <section class="blue"></section>
     <img src="assets/images/circles.svg" class="circles-img" alt="Circles">
-    <div class="mobile-menu" id="mobile-menu">
-        <div class="x-menu" id="x-menu">
-            <div class="close">
-                <div class="close-btn"></div>
+
+    <div class="mobile-cover" id="mobile-cover">
+        <div class="mobile-menu show" id="mobile-menu">
+            <div class="x-menu" id="x-menu">
+                <div class="close">
+                    <div class="close-btn"></div>
+                </div>
             </div>
-        </div>
         <div class="mobile__button-list">
             <a href="/" class="btn navbar__right-login" id="login">Login</a>
             <a href="/" class="btn navbar__right-signup" id="signup">Register</a>
+        </div>
         </div>
     </div>
 
@@ -52,7 +55,7 @@
                     <a href="" class="btn navbar__right-signup" id="signup-desktop">Register</a>
                 </div>
                 <div class="ham" id="ham">
-                    
+
                 </div>
             </nav>
         </header>
@@ -93,7 +96,7 @@
         //Login Button Click
         document.getElementById("login").addEventListener("click", function (e) {
             e.preventDefault()
-            document.getElementById("mobile-menu").classList.remove('show');
+            document.getElementById("mobile-cover").classList.remove('show');
             document.getElementById("login-page").classList.add('show');
             document.getElementById("x").style.display = "block";
         });
@@ -120,7 +123,7 @@
         //Signup Button Click
         document.getElementById("signup").addEventListener("click", function (e) {
             e.preventDefault();
-            document.getElementById("mobile-menu").classList.remove('show');
+            document.getElementById("mobile-cover").classList.remove('show');
             document.getElementById("signup-page").classList.add('show');
             document.getElementById("x-signup").style.display = "block";
         });
@@ -138,13 +141,19 @@
         // Toggle Menu
         document.getElementById("ham").addEventListener("click", function (e) {
             e.preventDefault();
-            document.getElementById("mobile-menu").classList.add('show');
+            document.getElementById("mobile-cover").classList.add('show');
             document.getElementById("x-menu").style.display = "block";
         });
 
         document.getElementById("x-menu").addEventListener("click", function (e) {
             e.preventDefault();
-            document.getElementById("mobile-menu").classList.remove('show');
+            document.getElementById("mobile-cover").classList.remove('show');
+            document.getElementById("x-menu").style.display = "none";
+        });
+
+        document.getElementById("mobile-cover").addEventListener("click", function (e) {
+            e.preventDefault();
+            document.getElementById("mobile-cover").classList.remove('show');
             document.getElementById("x-menu").style.display = "none";
         });
     </script>
