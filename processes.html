@@ -32,8 +32,10 @@
             </div>
         </div>
         <div class="mobile__button-list">
-            <a href="/" class="btn navbar__right-login" id="login">Login</a>
-            <a href="/" class="btn navbar__right-signup" id="signup">Register</a>
+            <a class="profile-name">Savalijey</a>
+            <a href="/" class="btn navbar__right-login" id="new-process">New process</a>
+            <a href="/" class="btn navbar__right-login" id="my-processes">My processes</a>
+            <a href="/" class="btn navbar__right-signup" id="logout-mobile">Logout</a>
         </div>
     </div>
 
@@ -48,14 +50,14 @@
             </div>
         </div>
         <form class="login-form" method="POST">
-            <h1>Login</h1>
+            <h1>Enter Mobile Number</h1>
             <p>Log into your account to start using our <br>services.</p><br>
             <input required type="email" name="email" id="email" class="input-fields" placeholder="Email"><br>
             <input required type="password" name="" id="password" class="input-fields" placeholder="Password"><br>
             <input type="submit" name="login-submit" id="login-submit" class="btn submit-btn" value="Login"><br>
 
-            <p>Do not have an account?<br> 
-            <a href="" id="signup-link">Register</a> here.</p><br>
+            <p>Do not have an account?<br>
+                <a href="" id="signup-link">Register</a> here.</p><br>
         </form>
     </section>
 
@@ -74,11 +76,12 @@
             <p>Create an account to start enjoying our <br>services.</p><br>
             <input required type="text" name="name" id="name-signup" class="input-fields" placeholder="Username"><br>
             <input required type="email" name="email" id="email-signup" class="input-fields" placeholder="Email"><br>
-            <input required type="password" name="" id="password-signup" class="input-fields" placeholder="Password"><br>
+            <input required type="password" name="" id="password-signup" class="input-fields"
+                placeholder="Password"><br>
             <input type="submit" name="signup-submit" id="signup-submit" class="btn submit-btn" value="Signup"><br>
 
-            <p>Already have an account?<br> 
-            <a href="" id="login-link">Login</a> here.</p><br>
+            <p>Already have an account?<br>
+                <a href="" id="login-link">Login</a> here.</p><br>
         </form>
     </section>
 
@@ -92,29 +95,65 @@
                     <a href="/" class="navbar__left-logo">Telegram <span>Textbot</span></a>
                 </div>
                 <div class="navbar__right">
-                    <a href="" class="btn navbar__right-login" id="login-desktop">Login</a>
-                    <a href="" class="btn navbar__right-signup" id="signup-desktop">Register</a>
+                    <a href="" class="btn navbar__right-login my-processes-desktop" id="my-processes-desktop">My processes</a>
+                    <div class="dropdown">
+                        <img src="assets/images/person_outline.svg" class="logout-icon" alt="">
+                        <div class="dropdown-content">
+                            <a href="/">Logout</a>
+                        </div>
+                    </div>
                 </div>
                 <div class="ham" id="ham">
 
                 </div>
             </nav>
         </header>
-        <section class="content-section">
-            <div class="content-section__left">
-                <h1>
-                    Automate
-                </h1>
-                <p>
-                    Broadcast your messages to different groups or channels automatically.
-                    Telegram Textbot will ease your work and give you more time to do productive work
-                </p>
-                <br>
-                <a href="/" class="btn navbar__right-signup" id="signup-main">Create Account Now</a>
+        <section class="content-section-processes">
+
+            <div class="section-header">
+                <div  class="section-title">
+                    <h1>All Processes</h1>
+                </div>
+                <div class="section-title-button">
+                    <a href="/" class="add-process">Add Process</a>
+                </div>
             </div>
-            <div class="content-section__right">
-                <img src="assets/images/telegram-logo.svg" alt="logo" id="tele-logo">
+
+            <div class="section-content">
+                <div class="section-content__card">
+                    <img src="assets/images/circles.svg" alt="">
+                    <a href="/" class="add-process">Add Process</a>
+                </div>
+                <div class="section-content__card">
+                    <img src="assets/images/circles.svg" alt="">
+                    <a href="/" class="add-process">Add Process</a>
+                </div>
+                <div class="section-content__card">
+                    <img src="assets/images/circles.svg" alt="">
+                    <a href="/" class="add-process">Add Process</a>
+                </div>
+                <div class="section-content__card">
+                    <img src="assets/images/circles.svg" alt="">
+                    <a href="/" class="add-process">Add Process</a>
+                </div>
+                <div class="section-content__card">
+                    <img src="assets/images/circles.svg" alt="">
+                    <a href="/" class="add-process">Add Process</a>
+                </div>
+                <div class="section-content__card">
+                    <img src="assets/images/circles.svg" alt="">
+                    <a href="/" class="add-process">Add Process</a>
+                </div>
+                <div class="section-content__card">
+                    <img src="assets/images/circles.svg" alt="">
+                    <a href="/" class="add-process">Add Process</a>
+                </div>
+                <div class="section-content__card">
+                    <img src="assets/images/circles.svg" alt="">
+                    <a href="/" class="add-process">Add Process</a>
+                </div>
             </div>
+
         </section>
 
         <!--

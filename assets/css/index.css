@@ -93,6 +93,83 @@ h1{
 .navbar__left-logo span {
     color: var(--main-bg-color);
 }
+.dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  .dropdown span{
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  .dropdown-content {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+    padding: 0 10px;
+     top:0;
+     margin-top: 45px;
+     right:0;
+     text-align: left;
+     height: 45px;
+    z-index: 1;
+    display: grid;
+    align-items: center;
+    width: 100%;
+    transition: opacity .5s, visibility 4s;
+  }
+
+  .dropdown-content a{
+      width: 100%;
+      font-weight: normal;
+      font-size: 14px;
+      color: var(--main-bg-color);
+  }
+
+
+  .dropdown-content a:hover{
+    color: rgb(68, 68, 68);
+  }
+  
+  .dropdown:hover .dropdown-content {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .dropdown:hover .dropdown-content:after{
+    content: "";
+    position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #f9f9f9;
+  bottom:0;
+  margin-bottom: 45px;
+  right: 0;
+  }
+
+  .icon-container{
+    text-align: center;
+    display: grid;
+    place-items: center;
+  }
+
+  .logout-icon{
+      cursor: pointer;
+      margin-bottom: -8px !important;
+  }
+
+  .profile-name{
+      text-align: left;
+      color: var(--main-bg-color);
+      font-weight: bolder;
+  }
+
+
 .btn{
     border-radius: 5px;
     font-size: 14px;
@@ -189,6 +266,57 @@ h1{
     align-self: center;
     width:100%;
 }
+
+
+/**
+* Process list
+*/
+.content-section-processes{
+    margin-top: 5%;
+    padding: 1.3rem;
+}
+.section-header{
+    display: grid;
+    width: 100%;
+    grid-template-columns: 50% 50%;
+}
+.section-title-button{
+    margin-left: auto;
+}
+.add-process{
+    background: var(--main-bg-color);
+    border-radius: 5px;
+    font-size: 14px;
+    padding: .5rem 1.5rem;
+    color:#fff;
+    font-weight: bold;
+    transition: background .5s;
+}
+.add-process:hover{
+    background: #fff;
+    color: var(--main-bg-color);
+    border: 1px solid var(--main-bg-color);
+}
+
+.section-content{
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+}
+.section-content .section-content__card {
+    height: 300px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 5fr 1fr;
+    gap: .5fr;
+    border: solid 1px orange;
+}
+.section-content .section-content__card img{
+    width: 100px;
+}
+
+
 /**
 * Login & Signup Page
 */
@@ -337,6 +465,7 @@ h1{
 .footer__right{
     text-align: right;
 }
+
 
 
 /**
