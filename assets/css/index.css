@@ -299,9 +299,11 @@ h1{
 }
 
 .section-content{
-    margin-top: 30px;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+  margin: 0 auto;
+  grid-gap: 2rem;
+  margin-top: 30px;  
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
     grid-template-rows: auto;
 }
 .section-content .section-content__card {
@@ -479,6 +481,10 @@ h1{
 }
 
 @media screen and (max-width:600px) {
+    .section-header{
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
     .content-section__left{
         margin-top: 20%
     }
