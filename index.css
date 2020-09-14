@@ -424,8 +424,10 @@ h1{
         width: 70%;
         opacity: .99;
         z-index: 202;
+        box-shadow: 1px 1px 10px rgb(105, 105, 105);
     }
     .mobile-cover.show{
+        box-shadow: none;
         max-width: 100%;
         width: 100%;
         z-index: 102;
@@ -450,7 +452,7 @@ h1{
         position: relative;
         font-size: 3rem;
     }
-    
+
     #tele-logo{
         display: none;
     }
