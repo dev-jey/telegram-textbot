@@ -416,11 +416,13 @@ h1{
     }
 
     .mobile-menu.show, .mobile-cover.show{
-        width: 280px;
+        max-width: 350px;
+        width: 70%;
         opacity: .99;
         z-index: 202;
     }
     .mobile-cover.show{
+        max-width: 100%;
         width: 100%;
         z-index: 102;
         background-color: rgba(0, 0, 0, 0.5);
