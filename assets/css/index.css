@@ -363,6 +363,76 @@ h1{
 .flip-card-back{
     transform: rotateY(180deg);
     border: 1px solid    var(--main-bg-color);
+    background-image: url(../images/circles.svg);
+    background-size: 100%;
+}
+
+.start-process{
+    display: grid;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    background: var(--main-bg-color);
+    color: #fff;
+    border:#fff 1px solid; max-width: 350px;
+    cursor: pointer;     
+    height: 40px; 
+    margin:auto;
+    transition: background .5s, color .5s;
+}
+
+.edit, .delete{
+    position: absolute;
+    background: var(--main-bg-color);
+    right:0;
+    top:0;
+    margin-top:10px;
+    margin-right: -10px;
+    outline: none;
+    border:none;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: .8rem;
+    font-weight: bold;
+    padding: .4rem 1rem;
+    transition: background .5s;
+}
+
+.delete{
+    margin-top: 50px;
+    background: red;
+}
+.edit:hover{
+    background: #fff;
+    color: var(--main-bg-color);
+    border:1px solid var(--main-bg-color)
+}
+.delete:hover{
+    color: red;
+    border: 1px solid   red;
+    background: #fff;
+    box-sizing: content-box;
+}
+
+.start-process:hover{
+    background: linear-gradient(to right,  rgb(228, 255, 254), rgba(255, 255, 255,.2),  rgb(228, 255, 254));
+    color: var(--main-bg-color);
+    border-top: var(--main-bg-color) solid 1px;
+}
+
+.flip-card-back__content{
+    margin-top: 80px;
+    padding: .05rem 1rem
+}
+
+.flip-card-back__content p{
+    font-size: .6rem;
+    color: rgb(88, 88, 88);
+}
+.flip-card-back__content label{
+    color: var(--main-bg-color);
+    font-size: .7rem;
 }
 
 .section-content .section-content__card img{
