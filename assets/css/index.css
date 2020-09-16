@@ -421,6 +421,12 @@ h1{
     border-top: var(--main-bg-color) solid 1px;
 }
 
+.start-process:focus{
+    outline: none;
+    border: none;
+    border-top: var(--main-bg-color) solid 1px;
+}
+
 .flip-card-back__content{
     margin-top: 80px;
     padding: .05rem 1rem
@@ -436,8 +442,9 @@ h1{
 }
 
 .section-content .section-content__card img{
-    width: 210px;
+    width: 188px;
     display: block;
+    margin:auto
 }
 
 
