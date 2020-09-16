@@ -7,9 +7,42 @@ login && login.addEventListener("click", function (e) {
     openLogin(e);
 });
 
+// Start process
+var processBtn = document.getElementById("start-process");
+processBtn && processBtn.addEventListener("click", function(e){
+    openMobileForm(e);
+})
+
+var mobileSubmitBtn = document.getElementById("mobile-submit");
+mobileSubmitBtn  && mobileSubmitBtn.addEventListener("click", function(e){
+    closeMobile(e);
+    openVerifyPage(e);
+})
+
+
+// var verifyBtn = document.getElementById("verify-submit");
+// verifyBtn  && verifyBtn.addEventListener("click", function(e){
+//     closeVerifyPage(e);
+// })
+
+
+
 var loginDesktop = document.getElementById("login-desktop");
 loginDesktop && loginDesktop.addEventListener("click", function (e) {
     openLogin(e);
+});
+
+// Mobile close
+
+var xMobile = document.getElementById("x-mobile");
+xMobile && xMobile.addEventListener("click", function (e) {
+    closeMobile(e);
+});
+
+// Verify Close
+var xVerify = document.getElementById("x-verify");
+xVerify && xVerify.addEventListener("click", function (e) {
+    closeVerifyPage(e);
 });
 
 //Login close
@@ -71,6 +104,18 @@ loginLink && loginLink.addEventListener("click", function (e) {
 
 
 // Functions
+function openMobileForm(e){
+    e.preventDefault();
+    document.getElementById("mobile-page").classList.add("show");
+    document.getElementById("x-mobile").style.display = "block";
+}
+
+function openVerifyPage(e){
+    e.preventDefault();
+    document.getElementById("verify-page").classList.add("show");
+    document.getElementById("x-verify").style.display ="block";
+}
+
 function openSignup(e) {
     e.preventDefault();
     document.getElementById("signup-page").classList.add('show');
@@ -108,3 +153,14 @@ function closeMenu(e) {
     document.getElementById("x-menu").style.display = "none";
 }
 
+function closeMobile(e) {
+    e.preventDefault();
+    document.getElementById("mobile-page").classList.remove('show');
+    document.getElementById("x-mobile").style.display = "none";
+}
+
+function closeVerifyPage(e){
+    e.preventDefault();
+    document.getElementById("verify-page").classList.remove("show");
+    document.getElementById("x-verify").style.display ="none";
+}
