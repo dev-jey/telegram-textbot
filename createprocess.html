@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/index.css">
+    <title>Telegram Textbot</title>
+</head>
+
+<body>
+
+    <!--
+        Blue Section
+    -->
+    <section class="blue"></section>
+    <img src="assets/images/circles.svg" class="circles-img" alt="Circles">
+
+    <!--
+        Overlay for Modals
+    -->
+    <div class="mobile-cover" id="mobile-cover">
+    </div>
+
+    <!--
+        Mobile Menu
+    -->
+    <div class="mobile-menu" id="mobile-menu">
+        <div class="x-menu" id="x-menu">
+            <div class="close">
+                <div class="close-btn"></div>
+            </div>
+        </div>
+        <div class="mobile__button-list">
+            <a class="profile-name">Savalijey</a>
+            <a href="/" class="btn navbar__right-login" id="new-process">New process</a>
+            <a href="processes.html" class="btn navbar__right-login" id="my-processes">My processes</a>
+            <a href="/" class="btn navbar__right-signup" id="logout-mobile">Logout</a>
+        </div>
+    </div>
+
+
+    <!--
+        MAin section
+    -->
+    <section class="main">
+        <header>
+            <nav class="navbar">
+                <div class="navbar__left">
+                    <a href="/" class="navbar__left-logo">Telegram <span>Textbot</span></a>
+                </div>
+                <div class="navbar__right">
+                    <a href="" class="btn navbar__right-login my-processes-desktop" id="my-processes-desktop">My
+                        processes</a>
+                    <div class="dropdown">
+                        <img src="assets/images/person_outline.svg" class="logout-icon" alt="">
+                        <div class="dropdown-content">
+                            <a href="/">Logout</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="ham" id="ham">
+
+                </div>
+            </nav>
+        </header>
+        <section class="content-section">
+            <div class="content-section__left">
+
+            </div>
+            <div class="content-section__right">
+
+                <form class="add-form" method="POST">
+                    <h1>Enter Process Details</h1>
+                    <p>All fields are mandatory and necessary for a <br> process to wor correctly. Pay attention to <br>
+                        specific instructions.</p><br>
+                    <input required type="text" name="name" id="name" class="input-fields"
+                        placeholder="Process name"><br>
+                    <input required type="number" name="duration" id="duration" class="input-fields"
+                        onkeydown="javascript: return event.keyCode == 69 ? false : true" placeholder="Duration"><br>
+                    <input required type="text" name="link" id="link" class="input-fields" placeholder="Link"><br>
+
+                    <textarea name="message" id="message" cols="30" rows="6" placeholder="Message"></textarea>
+
+                    <input type="submit" name="add-submit" id="add-submit" class="btn submit-btn"
+                        value="Add Process"><br>
+                </form>
+
+            </div>
+        </section>
+
+        <!--
+            Footer
+        -->
+        <footer class="footer">
+            <div class="footer__left">
+                All Rights Reserved. <a href="/">Terms</a> and <a href="/">Conditions</a>.
+            </div>
+            <div class="footer__right">
+                &copy;<a href="https://dev-jey.github.io" target="_blank" class="footer__copyright"> DevJey </a>
+                <script>
+                    document.write(new Date().getFullYear())
+                </script>.
+            </div>
+        </footer>
+    </section>
+
+    <!--
+        Javascript
+    -->
+    <script src="assets/js/index.js">
+    </script>
+</body>
+
+</html>
