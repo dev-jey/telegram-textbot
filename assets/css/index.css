@@ -557,16 +557,6 @@ h1,h2,h3,h4,h5,h6{
     margin-left: 3rem;
 }
 
-.faq h5::before{
-    content: "";
-    position: absolute;
-    width: 100px;
-    height: 2px;
-    margin-bottom: -.5rem;
-    background: var(--text-muted);
-    bottom: 0;
-    left: 0;
-}
 
 .faq h5::after{
     content: "";
