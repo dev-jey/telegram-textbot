@@ -283,7 +283,7 @@ h1,h2,h3,h4,h5,h6{
 /**
 * Process list
 */
-.content-section-processes{
+.content-section-messages{
     margin-top: 5%;
     padding: 1.3rem;
 }
@@ -295,7 +295,7 @@ h1,h2,h3,h4,h5,h6{
 .section-title-button{
     margin-left: auto;
 }
-.add-process{
+.add-message{
     background: var(--main-bg-color);
     border-radius: 5px;
     font-size: 14px;
@@ -304,7 +304,7 @@ h1,h2,h3,h4,h5,h6{
     font-weight: bold;
     transition: background .5s;
 }
-.add-process:hover{
+.add-message:hover{
     background: #fff;
     color: var(--main-bg-color);
     border: 1px solid var(--main-bg-color);
@@ -319,7 +319,7 @@ h1,h2,h3,h4,h5,h6{
     grid-template-rows: auto;
 }
 
-.process-name{
+.message-name{
     padding: .3rem 1rem;
     color: #fff;
 }
@@ -379,7 +379,7 @@ h1,h2,h3,h4,h5,h6{
     background-size: 100%;
 }
 
-.start-process{
+.start-message{
     display: grid;
     width: 100%;
     position: absolute;
@@ -427,20 +427,20 @@ h1,h2,h3,h4,h5,h6{
     box-sizing: content-box;
 }
 
-.start-process:hover{
+.start-message:hover{
     background: linear-gradient(to right,  rgb(228, 255, 254), rgba(255, 255, 255,.2),  rgb(228, 255, 254));
     color: var(--main-bg-color);
     border-top: var(--main-bg-color) solid 1px;
 }
 
-.start-process:focus{
+.start-message:focus{
     outline: none;
     border: none;
     border-top: var(--main-bg-color) solid 1px;
 }
 
 .flip-card-back__content{
-    margin-top: 70px;
+    margin-top: 95px;
     padding: .05rem 1rem
 }
 
@@ -539,7 +539,7 @@ h1,h2,h3,h4,h5,h6{
   }
 
 /**
-* Add process section
+* Add message section
 */
 .add-form{
     width: 100%;
