@@ -7,9 +7,9 @@ login && login.addEventListener("click", function (e) {
     openLogin(e);
 });
 
-// Start process
-var processBtn = document.getElementById("start-process");
-processBtn && processBtn.addEventListener("click", function(e){
+// Start message
+var messageBtn = document.getElementById("start-message");
+messageBtn && messageBtn.addEventListener("click", function(e){
     openMobileForm(e);
 })
 
