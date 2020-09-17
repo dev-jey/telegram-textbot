@@ -557,6 +557,17 @@ h1,h2,h3,h4,h5,h6{
     margin-left: 3rem;
 }
 
+.faq h5::before{
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 2px;
+    margin-bottom: -.5rem;
+    background: var(--text-muted);
+    bottom: 0;
+    left: 0;
+}
+
 .faq h5::after{
     content: "";
     position: absolute;
@@ -571,7 +582,7 @@ h1,h2,h3,h4,h5,h6{
 .faq p{
     margin-left: 3.3rem;
     position: relative;
-
+    color: var(--text-muted);
 }
 
 
@@ -609,12 +620,14 @@ h1,h2,h3,h4,h5,h6{
   }
 
 
-  .login-form  p, .signup-form  p, .mobile-form p, .add-form p{
+  .login-form  p, .signup-form  p, .mobile-form p{
     color:  rgb(209, 209, 209);
     font-size: .8rem;
 }
 .add-form p{
     padding-top: .25rem;
+    font-size: .8rem;
+    color: var(--text-muted);
 }
 
 .login-form  p a, .signup-form p  a, .add-form p a{
